@@ -39,8 +39,8 @@ body{
 
 .contenedorJuega{
     position: relative;
-    left: -15rem;
-    top: -40rem;
+    left: -10.2rem;
+    top: 1rem;
     font-size: 2rem;
     border: 2px solid black;
     padding: 1rem;
@@ -55,7 +55,7 @@ body{
 #reiniciar{
     position: relative;    
     top: -6rem;
-    left: 13rem;
+    left: 10rem;
     padding: 2rem;
     border: 2px black solid;
     font-size: 1.4rem;
