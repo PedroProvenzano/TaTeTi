@@ -3,7 +3,7 @@ let queJugadorVa = 1;
 let tableroTateti = [[0,0,0],
                      [0,0,0],
                      [0,0,0]];
-
+let empate = 0;
 
 // Jugadores
 let jugadorUno = prompt("Porfavor jugador uno ingrese su nombre");
@@ -28,11 +28,13 @@ reiniciar.addEventListener('click',()=>{
                      [0,0,0],
                      [0,0,0]];
     felicitaciones.style.display = "none";
+    empate = 0;
 })
 
 
 function agregarEventos(div,a,b){
     div.addEventListener('click', ()=>{
+        empate++
         if(queJugadorVa==1){
             div.innerText = "x";
             queJugadorVa++
@@ -66,6 +68,10 @@ agregarEventos(document.getElementById("nueve"),2,2);
 function checkdeGanar(){
 
 let checkGana = setInterval(() => {
+    if(empate==9){
+        felicitaciones.innerText = "Empate!";
+        felicitaciones.style.display = "block";
+    }
     // Horizontales
     for(let i=0; i < 3; i++){
         switch(JSON.stringify(tableroTateti[i])){
